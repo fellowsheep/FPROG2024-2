@@ -15,6 +15,11 @@ Para rodar este(s) programas, não é necessário baixar nenhuma dependência.
 
 Cada exercício da lista está implementado em um arquivo separado.
 
-Se você quiser conhecer mais da formatação da linguagem de markup utilizada pelo Github, acesse [este link](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+> [!TIP]
+> Se você quiser conhecer mais da formatação da linguagem de markup utilizada pelo Github, acesse [este link](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+> 
+> Você pode adicionar mais seções, de acordo com a necessidade
+> 
+> Sempre nomeie este arquivo de documentação para README.md e tenha um destes em cada diretório de projeto de tarefa. Assim, ao navegarmos pelo diretório, o texto deste documento aparecerá diretamente.
 
 
