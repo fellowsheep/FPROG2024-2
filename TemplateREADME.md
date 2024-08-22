@@ -43,6 +43,10 @@ Adicione comandos de execução e exemplos que você acha que os usuários achar
 
 > Se o seu programa tiver saída gráfica, pode colocar um ou mais screenshots. Para inserir imagens você pode carregá-las e referenciá-las ou mesmo copiá-las e colá-las direto no texto (se estiver no Editor do Github).
 > 
+> ![image](exemplo.png)
+> 
+> ```![image](exemplo.png)```
+> 
 > Se for um programa que gere algum resultado, como tabelas etc, também pode colocar aqui
 
 ## Comentários gerais
