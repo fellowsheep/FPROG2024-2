@@ -1,0 +1,2 @@
+//Evitar que os executáveis subam para o repo online
+*.exe
