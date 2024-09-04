@@ -21,7 +21,7 @@
 
 ### Baixando o compilador C++ - MinGW
 
-3 - Escolher qual compilador C++ baixar: MSVC (Microsoft, o mesmo do Visual Studio) ou MinGW (open source): https://code.visualstudio.com/docs/languages/cpp. Em aula, estamos usando o MinGW.
+3 - Escolher qual compilador C++ baixar: MSVC (Microsoft, o mesmo do Visual Studio) ou MinGW (open source). Em aula, estamos usando o MinGW.
 
  - Uma das maneiras de baixar o MinGW no Windows é usando um gerenciador de pacotes chamado MSys2:
    - Baixar e instalar o MSys2: https://github.com/msys2/msys2-installer/releases/download/2024-01-13/msys2-x86_64-20240113.exe
