@@ -34,6 +34,22 @@ int main()
 
     printf("A média é %.2f\n", media);
 
+    //-------------------------------------------
+    printf("----------------------------\n");
+    // Resolução do mesmo exercício, usando for
+    max = 5;
+    soma = 0;
+    for (cont = 0;cont < max; cont++)
+    {
+        //Ideia 2: Sortear ao invés de ler
+        n = rand() % 11; //Sorteia um nro de 0 a 10
+        printf("Nro sorteado = %d\n",n);
+        soma = soma + n;
+    }
+    printf("Soma é %d\n", soma);
+    media = soma / (float) max;
+    printf("A média é %.2f\n", media);
+
     return 0;
 }
 
