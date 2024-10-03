@@ -11,15 +11,13 @@ Algumas dicas para a instalação do Visual Studio com suporte ao C/C++ podem se
 
 E para a entrega dos exercícios, recomenda-se a criação de um repositório no Github (ou similar) e seguir a seguinte estrutura:
 
-![image](https://github.com/user-attachments/assets/861be1c0-77ca-4eb1-9867-6a6d39b8bfec)
-
-
+<img src= "assets/Repo01.png" alt="Sugestão de estrutura" width = 300>
 
 Ou seja, um repositório para a Atividade Acadêmica (disciplina) e cada tarefa em um diretório separado (projeto).
 No diretório de cada projeto, além do(s) código(s) fonte, recomenda-se criar um arquivo README.md, conforme este template:
 - [Template para o README.md dos projetos](TemplateREADME.md)
 
-![image](https://github.com/user-attachments/assets/887371aa-68c5-462b-928e-4a90d2acfe8f)
+<img src= "assets/Repo02.png" alt="Sugestão de estrutura" width = 350>
 
 
 
