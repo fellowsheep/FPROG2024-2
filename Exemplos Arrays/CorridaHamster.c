@@ -19,11 +19,11 @@ int main()
     while (acabou == false) //! acabou é igual a acabou == false
     {
         // Limpa a tela - Só usar se for rodar em terminal FORA do VIsual Studio
-        //#ifdef _WIN32
-        //system("cls"); // Windows
-        //#else
-        //system("clear"); // Linux/macOS
-        //#endif
+        #ifdef _WIN32
+        system("cls"); // Windows
+        #else
+        system("clear"); // Linux/macOS
+        #endif
 
         // Movimentação dos hamsters
         for (int i = 0; i < NB_HAMSTERS; i++) //percorre o array das posições dos hamsters
