@@ -117,5 +117,170 @@ int main() {
 
 Esse exemplo é útil para armazenar e manipular múltiplas instâncias de uma mesma `struct`, como uma lista de pessoas.
 
+## Exemplo de Função que Retorna uma Struct
+
+É possível criar uma função que retorna uma `struct` inteira, o que pode ser útil para inicializar objetos complexos de forma organizada. No exemplo abaixo, temos uma função chamada `inicializarPessoa` que recebe parâmetros e retorna uma nova `Pessoa` com os valores preenchidos.
+
+### Exemplo de Função
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+// Declaração da struct
+struct Pessoa {
+    char nome[50];
+    int idade;
+    float altura;
+};
+
+// Função que inicializa uma struct Pessoa
+struct Pessoa inicializarPessoa(char nome[], int idade, float altura) {
+    struct Pessoa p;
+    strcpy(p.nome, nome);  // Copia o nome para o campo nome da struct
+    p.idade = idade;       // Atribui a idade
+    p.altura = altura;     // Atribui a altura
+    return p;              // Retorna a struct preenchida
+}
+
+int main() {
+    // Chama a função para inicializar uma pessoa
+    struct Pessoa pessoa1 = inicializarPessoa("Ana", 25, 1.65);
+
+    // Exibe os dados da pessoa inicializada
+    printf("Nome: %s\n", pessoa1.nome);
+    printf("Idade: %d\n", pessoa1.idade);
+    printf("Altura: %.2f\n", pessoa1.altura);
+
+    return 0;
+}
+```
+
+### Explicação
+
+- **Função `inicializarPessoa`**: Esta função recebe o nome, idade, e altura como parâmetros e retorna uma nova `Pessoa` com esses valores.
+- **Uso de `strcpy`**: Como `nome` é uma string, usamos `strcpy` para copiar o valor para o campo `nome` da struct `Pessoa`.
+- **Retorno da `struct`**: A função retorna a struct preenchida, permitindo que o chamador armazene o valor retornado em uma variável `Pessoa`.
+- **Exemplo de uso**: No `main`, chamamos `inicializarPessoa` para criar uma nova `Pessoa` e exibir seus dados.
+
+---
+
+## Função que Exibe os Dados de uma Struct
+
+Além de inicializar structs, é comum criar funções para exibir os dados de uma `struct`. No exemplo abaixo, a função `exibirDados` recebe uma `Pessoa` e imprime suas informações.
+
+### Exemplo Completo com Funções de Inicialização e Exibição
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+// Declaração da struct
+struct Pessoa {
+    char nome[50];
+    int idade;
+    float altura;
+};
+
+// Função que inicializa uma struct Pessoa com os dados fornecidos
+struct Pessoa inicializarPessoa(char nome[], int idade, float altura) {
+    struct Pessoa p;
+    strcpy(p.nome, nome);  // Copia o nome para o campo nome da struct
+    p.idade = idade;       // Atribui a idade
+    p.altura = altura;     // Atribui a altura
+    return p;              // Retorna a struct preenchida
+}
+
+// Função que exibe os dados de uma Pessoa
+void exibirDados(struct Pessoa p) {
+    printf("Nome: %s\n", p.nome);
+    printf("Idade: %d\n", p.idade);
+    printf("Altura: %.2f\n", p.altura);
+}
+
+int main() {
+    // Passo 1: Inicializa uma pessoa usando a função inicializarPessoa
+    struct Pessoa pessoa1 = inicializarPessoa("Ana", 25, 1.65);
+
+    // Passo 2: Exibe os dados da pessoa com a função exibirDados
+    exibirDados(pessoa1);
+
+    return 0;
+}
+```
+### Explicação
+
+- **Função `exibirDados`**: Esta função recebe uma `Pessoa` como parâmetro e imprime seus campos `nome`, `idade`, e `altura`.
+- **Passagem por valor**: A função recebe uma cópia da `struct` `Pessoa`, então qualquer modificação dentro da função não altera o valor original fora dela.
+- **Uso no `main`**: Após inicializar `pessoa1`, chamamos `exibirDados(pessoa1)` para mostrar seus dados.
+
+## Exemplo Completo: Arrays de Structs com Funções
+
+Neste exemplo, vamos combinar tudo o que aprendemos até agora:
+
+- Criar um **array de `struct Pessoa`**.
+- **Inicializar** cada elemento do array usando a função `inicializarPessoa`.
+- **Exibir** os dados de cada pessoa usando a função `exibirDados`.
+
+### Código Exemplo
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+// Declaração da struct
+struct Pessoa {
+    char nome[50];
+    int idade;
+    float altura;
+};
+
+// Função que inicializa uma struct Pessoa com os dados fornecidos
+struct Pessoa inicializarPessoa(char nome[], int idade, float altura) {
+    struct Pessoa p;
+    strcpy(p.nome, nome);  // Copia o nome para o campo nome da struct
+    p.idade = idade;       // Atribui a idade
+    p.altura = altura;     // Atribui a altura
+    return p;              // Retorna a struct preenchida
+}
+
+// Função que exibe os dados de uma Pessoa
+void exibirDados(struct Pessoa p) {
+    printf("Nome: %s\n", p.nome);
+    printf("Idade: %d\n", p.idade);
+    printf("Altura: %.2f\n", p.altura);
+}
+
+int main() {
+    // Criação de um array de structs Pessoa
+    struct Pessoa grupo[5];
+
+    // Inicialização dos dados usando a função inicializarPessoa
+    grupo[0] = inicializarPessoa("Ana", 25, 1.65);
+    grupo[1] = inicializarPessoa("Carlos", 30, 1.80);
+    grupo[2] = inicializarPessoa("Maria", 22, 1.60);
+    grupo[3] = inicializarPessoa("Lucas", 28, 1.75);
+    grupo[4] = inicializarPessoa("Sofia", 27, 1.68);
+
+    // Exibição dos dados usando a função exibirDados
+    for (int i = 0; i < 5; i++) {
+        printf("\nPessoa %d:\n", i + 1);
+        exibirDados(grupo[i]);
+    }
+
+    return 0;
+}
+```
+### Explicação
+
+- **Array de structs**: Criamos um array `grupo` com 5 elementos do tipo `struct Pessoa`.
+- **Inicialização com `inicializarPessoa`**:
+  - Para cada posição do array, chamamos a função `inicializarPessoa`, passando os dados de cada pessoa.
+  - A função retorna uma `Pessoa` com os dados preenchidos, que é armazenada no array.
+- **Exibição com `exibirDados`**:
+  - Utilizamos um loop `for` para percorrer o array.
+  - Em cada iteração, chamamos `exibirDados` para o elemento atual do array, exibindo as informações da pessoa.
+- **Saída do Programa**:
+  - O programa irá imprimir os dados das cinco pessoas, organizados e formatados.
 
 
