@@ -76,3 +76,47 @@ Essas linhas configuram as informações essenciais para que o CMake gere um arq
 
 Ao abrir a pasta raiz, o VSCode reconhece o arquivo `CMakeLists.txt`, permitindo que o CMake Tools funcione adequadamente e encontre todas as dependências do projeto.
 
+## Passo 3: Configurar o CMake no VSCode
+
+1. **Selecionar o Kit de Compilação**:
+   - Na barra de status do VSCode (parte inferior), você verá a opção **[No Kit Selected]**.
+   - Clique nela e selecione o compilador C/C++ que você tem instalado (por exemplo, **GCC** ou **MinGW**).
+
+2. **Configurar o Projeto**:
+   - Após selecionar o kit, clique em **[CMake: Configure]** na barra de status ou pressione `Ctrl + Shift + P` (ou `Cmd + Shift + P` no macOS) para abrir a paleta de comandos.
+   - Digite **CMake: Configure** e selecione essa opção.
+   - O CMake irá configurar o projeto e gerar uma pasta `build` com os arquivos necessários para compilação.
+
+> **Dica:** A pasta `build` criada pelo CMake armazenará os arquivos de configuração e outros arquivos temporários gerados durante a compilação.
+
+## Passo 4: Compilar o Projeto
+
+1. **Compilar com o CMake Tools**:
+   - Na barra de status do CMake (na parte inferior do VSCode), clique em **[CMake: Build]** ou use o comando `Ctrl + Shift + P` (ou `Cmd + Shift + P` no macOS) para abrir a paleta de comandos e selecione **CMake: Build**.
+   - O VSCode irá compilar o projeto e gerar um executável na pasta `build`.
+
+> **Nota:** O nome do executável gerado será o mesmo definido no arquivo `CMakeLists.txt`. Nesse caso, será `meu_projeto`.
+
+## Passo 5: Executar o Programa
+
+1. **Abrir o Terminal Integrado**:
+   - No VSCode, abra o terminal integrado com `Ctrl + `` (ou vá em **Terminal > New Terminal**).
+
+2. **Executar o Executável**:
+   - No terminal, navegue até a pasta `build`:
+     ```bash
+     cd build
+     ```
+   - Execute o programa:
+     - No Linux/macOS:
+       ```bash
+       ./meu_projeto
+       ```
+     - No Windows:
+       ```cmd
+       .\meu_projeto.exe
+       ```
+
+E pronto! Agora seu programa deve estar em execução no terminal.
+
+
