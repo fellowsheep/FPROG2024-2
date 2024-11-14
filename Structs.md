@@ -316,5 +316,12 @@ int main() {
 
 Este exemplo mostra como usar arrays de structs e funções para modularizar e organizar o código de forma clara e eficiente.
 
+## Referências
+
+1. [GeeksforGeeks - Structures in C](https://www.geeksforgeeks.org/structures-c/?ref=lbp): Explicação completa e com exemplos detalhados sobre structs em C.
+2. [TutorialsPoint - C Structures](https://www.tutorialspoint.com/cprogramming/c_structures.htm): Um guia simples e direto sobre structs, com muitos exemplos práticos.
+3. [Programiz - C Struct](https://www.programiz.com/c-programming/c-structures): Traz uma introdução clara a structs em C, com exemplos fáceis de seguir e exercícios práticos.
+
+
 
 
