@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+/*
+Exercício 1 da Lista 6: Dados os vetores v1=[1,5,9,2,5], v2=[7,4,13,21,6] e v3=[8,-3,5,7,12], 
+faça um programa que copie o conteúdo dos vetores dados para uma 
+matriz de tamanho 3x5 de forma a obter o seguinte resultado:
+M =[ 1  5 9  2  5 
+     7  4 13 21 6 
+	 8 -3 5  7  12]
+*/
+
 int main()
 {
     int v1[5] = {1, 5, 9, 2, 5};
